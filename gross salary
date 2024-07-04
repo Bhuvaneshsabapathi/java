@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class gross{
+    public static void main(String args[]){
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the basic Salary:");
+        double s=in.nextLong();
+        double hra,da;
+        if(s<=10000){
+            hra=s*0.2;
+            da=s*0.8;
+        }else if(s<=20000){
+            hra=s*0.25;
+            da=s*0.9;
+        }else{
+            hra=s*0.3;
+            da=s*0.95;
+        }
+        double grosssalary=s+hra+da;
+        System.out.println("Gross salary:"+grosssalary);
+    }
+}
